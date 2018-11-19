@@ -1,3 +1,0 @@
-#!bin/bash
-
-sudo find . -type f -size +300M -print0 |while IFS= read -r -d $'\0' line; do /usr/bin/rsync -avrh $line /home/hiteshs/testing1/ ; done && find . -type f -size +300M -delete
